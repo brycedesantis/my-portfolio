@@ -1,8 +1,8 @@
 export default function Nav(props) {
 	return (
-		<nav className=" p-2 flex justify-between">
+		<nav className="w-full my-1 p-2 flex justify-between fixed top-0 left-0 z-10">
 			<button
-				className="  px-5 py-2 text-sm leading-5 font-semibold"
+				className="px-5 py-2 text-sm leading-5 font-semibold z-0"
 				onClick={props.toggleDarkMode}
 			>
 				{props.darkMode ? (
@@ -29,15 +29,30 @@ export default function Nav(props) {
 					</svg>
 				)}
 			</button>
-			<div className="flex justify-between items-center p-2 text-2xl">
-				<h1 className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full">
-					<a href="#about">About</a>
+			<div className="flex justify-between items-center p-2 text-2xl z-0">
+				<h1>
+					<a
+						className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full"
+						href="#about"
+					>
+						About
+					</a>
 				</h1>
-				<h1 className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full">
-					<a href="#projects">Projects</a>
+				<h1>
+					<a
+						className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full"
+						href="#projects"
+					>
+						Projects
+					</a>
 				</h1>
-				<h1 className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full">
-					<a href="#skils">Skills</a>
+				<h1>
+					<a
+						className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full"
+						href="#skils"
+					>
+						Skills
+					</a>
 				</h1>
 			</div>
 		</nav>
