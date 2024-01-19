@@ -1,8 +1,13 @@
+import { useState } from "react"
+
 export default function Nav(props) {
+	const [mobileNav, setMobileNav] = useState(false)
+	const toggleNav = () => setMobileNav((prevState) => !prevState)
+
 	return (
-		<nav className="w-full my-1 p-2 flex justify-between fixed top-0 left-0 z-10">
+		<nav className="w-full h-[80px] px-4 flex justify-between items-center fixed z-10 bg-inherit">
 			<button
-				className="px-5 py-2 text-sm leading-5 font-semibold z-0"
+				className="px-5 py-2 text-sm leading-5 font-semibold"
 				onClick={props.toggleDarkMode}
 			>
 				{props.darkMode ? (
@@ -29,32 +34,64 @@ export default function Nav(props) {
 					</svg>
 				)}
 			</button>
-			<div className="flex justify-between items-center p-2 text-2xl z-0">
-				<h1>
-					<a
-						className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full"
-						href="#about"
+
+			<ul className="hidden md:flex">
+				<li>Home</li>
+				<li>About</li>
+				<li>Projects</li>
+				<li>Skills</li>
+				<li>Contact</li>
+			</ul>
+
+			{/*hamburger menu*/}
+			<div onClick={toggleNav} className="md:hidden z-10">
+				{!mobileNav ? (
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="w-6 h-6"
 					>
-						About
-					</a>
-				</h1>
-				<h1>
-					<a
-						className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full"
-						href="#projects"
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+						/>
+					</svg>
+				) : (
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						fill="none"
+						viewBox="0 0 24 24"
+						strokeWidth={1.5}
+						stroke="currentColor"
+						className="w-6 h-6"
 					>
-						Projects
-					</a>
-				</h1>
-				<h1>
-					<a
-						className="mx-1 px-3 py-1 hover:bg-gray-500 hover:rounded-full"
-						href="#skils"
-					>
-						Skills
-					</a>
-				</h1>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							d="M6 18 18 6M6 6l12 12"
+						/>
+					</svg>
+				)}
 			</div>
+
+			{/*mobile menu */}
+			<ul
+				className={
+					!mobileNav
+						? "hidden"
+						: "absolute top-0 left-0 w-full h-screen bg-inherit flex flex-col justify-center items-center"
+				}
+			>
+				<li className="py-6 text-4xl">Home</li>
+				<li className="py-6 text-4xl">About</li>
+				<li className="py-6 text-4xl">Projects</li>
+				<li className="py-6 text-4xl">Skills</li>
+				<li className="py-6 text-4xl">Contact</li>
+			</ul>
 		</nav>
 	)
 }
