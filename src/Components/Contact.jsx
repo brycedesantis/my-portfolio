@@ -7,7 +7,7 @@ export default function Contact() {
 			<form
 				method="POST"
 				action="https://getform.io/f/ccae9ba3-e813-42e5-85c8-818a1effdafa"
-				className="flex flex-col max-w-[600px] w-full text-black"
+				className="flex flex-col max-w-[600px] w-full"
 			>
 				<div className="pb-8">
 					<p className="text-4xl inline font-bold border-b-4 border-pink-600">
@@ -19,19 +19,19 @@ export default function Contact() {
 					</p>
 				</div>
 				<input
-					className="bg-[#ccd6f6] p-2"
+					className="bg-[#ccd6f6] p-2 text-black"
 					type="text"
 					placeholder="Name"
 					name="name"
 				/>
 				<input
-					className="my-4 p-2 bg-[#ccd6f6]"
+					className="my-4 p-2 bg-[#ccd6f6] text-black"
 					type="email"
 					placeholder="Email"
 					name="email"
 				/>
 				<textarea
-					className="bg-[#ccd6f6] p-2"
+					className="bg-[#ccd6f6] p-2 text-black"
 					name="message"
 					rows="10"
 					placeholder="Message"

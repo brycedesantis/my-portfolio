@@ -6,6 +6,10 @@
 	@apply bg-[#0a192f] text-zinc-50;
 }
 
+.light {
+	@apply bg-slate-200 text-black;
+}
+
 @layer base {
 	li {
 		@apply px-4 cursor-pointer;

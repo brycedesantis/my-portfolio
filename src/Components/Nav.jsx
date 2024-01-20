@@ -1,11 +1,12 @@
 import { useState } from "react"
+import { Link } from "react-scroll"
 
 export default function Nav(props) {
 	const [mobileNav, setMobileNav] = useState(false)
 	const toggleNav = () => setMobileNav((prevState) => !prevState)
 
 	return (
-		<nav className="w-full h-[80px] px-4 flex justify-between items-center fixed z-10 bg-inherit">
+		<nav className="w-full h-[80px] px-4 flex justify-between items-center fixed z-10 bg-inherit shadow-lg shadow-[#040c16]">
 			<button
 				className="px-5 py-2 text-sm leading-5 font-semibold"
 				onClick={props.toggleDarkMode}
@@ -24,7 +25,7 @@ export default function Nav(props) {
 						xmlns="http://www.w3.org/2000/svg"
 						viewBox="0 0 24 24"
 						fill="currentColor"
-						className="hover:scale-105 w-8 h-8 hover:stroke-black hover:fill-white"
+						className="hover:scale-105 w-8 h-8 hover:stroke-black hover:fill-slate-200"
 					>
 						<path
 							fillRule="evenodd"
@@ -36,11 +37,31 @@ export default function Nav(props) {
 			</button>
 
 			<ul className="hidden md:flex">
-				<li>Home</li>
-				<li>About</li>
-				<li>Skills</li>
-				<li>Projects</li>
-				<li>Contact</li>
+				<li>
+					<Link to="home" smooth={true} duration={500}>
+						Home
+					</Link>
+				</li>
+				<li>
+					<Link to="about" smooth={true} duration={500}>
+						About
+					</Link>
+				</li>
+				<li>
+					<Link to="skills" smooth={true} duration={500}>
+						Skills
+					</Link>
+				</li>
+				<li>
+					<Link to="projects" smooth={true} duration={500}>
+						Projects
+					</Link>
+				</li>
+				<li>
+					<Link to="contact" smooth={true} duration={500}>
+						Contact
+					</Link>
+				</li>
 			</ul>
 
 			{/*hamburger menu*/}
@@ -86,11 +107,31 @@ export default function Nav(props) {
 						: "absolute top-0 left-0 w-full h-screen bg-inherit flex flex-col justify-center items-center"
 				}
 			>
-				<li className="py-6 text-4xl">Home</li>
-				<li className="py-6 text-4xl">About</li>
-				<li className="py-6 text-4xl">Skills</li>
-				<li className="py-6 text-4xl">Projects</li>
-				<li className="py-6 text-4xl">Contact</li>
+				<li className="py-6 text-4xl">
+					<Link onClick={toggleNav} to="home" smooth={true} duration={500}>
+						Home
+					</Link>
+				</li>
+				<li className="py-6 text-4xl">
+					<Link onClick={toggleNav} to="about" smooth={true} duration={500}>
+						About
+					</Link>
+				</li>
+				<li className="py-6 text-4xl">
+					<Link onClick={toggleNav} to="skills" smooth={true} duration={500}>
+						SKills
+					</Link>
+				</li>
+				<li className="py-6 text-4xl">
+					<Link onClick={toggleNav} to="projects" smooth={true} duration={500}>
+						Projects
+					</Link>
+				</li>
+				<li className="py-6 text-4xl">
+					<Link onClick={toggleNav} to="contact" smooth={true} duration={500}>
+						Contact
+					</Link>
+				</li>
 			</ul>
 		</nav>
 	)
