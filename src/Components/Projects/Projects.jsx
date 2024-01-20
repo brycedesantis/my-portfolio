@@ -1,44 +1,29 @@
-import { Calculator, EtchASketch, MemoryGame, TicTacToe } from "./ProjectData"
+import Card from "../Card"
+import { TicTacToe, Calculator, EtchASketch, MemoryGame } from "./ProjectData"
 
 export default function Projects() {
-	const repos = [TicTacToe, Calculator, MemoryGame, EtchASketch]
-
-	function mapRepos(repos) {
-		return repos.map((repo, index) => (
-			<div key={index} className="w-5/12 flex justify-start border-2 my-3">
-				<div className="w-4/12 h-4/12">
-					<a target="_blank" rel="noreferrer" href={repo.url}>
-						<img src={repo.imageSrc} alt={`${repo.title} Screenshot`} />
-					</a>
-				</div>
-				<div>
-					<a href={repo.url}>
-						<h1>{repo.title}</h1>
-					</a>
-					<p>{repo.desc}</p>
-				</div>
-			</div>
-		))
-	}
+	const projects = [TicTacToe, Calculator, EtchASketch, MemoryGame]
 
 	return (
-		<div
-			id="projects"
-			className="w-full m-auto min-h-screen max-h-screen relative flex items-center justify-center overflow-hidden"
-		>
-			<div className="w-9/12 border-t-2 border-b-2 border-black dark:border-zinc-50">
-				<div className="py-3">
-					<h1 className="text-2xl font-bold text-center">Projects</h1>
-					<div className="py-5 text-lg">
-						<p>
-							The following projects were created as part of{" "}
-							<span className="italic hover:text-amber-700">
-								<a href="https://www.theodinproject.com/">The Odin Project</a>
-							</span>
-							's curriculum.
-						</p>
-					</div>
-					<div className="flex flex-wrap justify-around">{mapRepos(repos)}</div>
+		<div name="projects" className="w-full md:h-screen bg-inherit">
+			<div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
+				<div className="pb-8">
+					<p className="text-4xl inline font-bold border-b-4 border-pink-600">
+						Projects
+					</p>
+					<p className="py-6">Here are a few projects that I have worked on</p>
+				</div>
+
+				<div className="grid sm:grid-cols-2 md:grid-cols-4 gap-4">
+					{projects.map((project, index) => (
+						<Card
+							key={index}
+							title={project.title}
+							imageSrc={project.imageSrc}
+							demoUrl={project.demoUrl}
+							githubRepo={project.githubRepo}
+						/>
+					))}
 				</div>
 			</div>
 		</div>

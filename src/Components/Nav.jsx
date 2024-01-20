@@ -38,8 +38,8 @@ export default function Nav(props) {
 			<ul className="hidden md:flex">
 				<li>Home</li>
 				<li>About</li>
-				<li>Projects</li>
 				<li>Skills</li>
+				<li>Projects</li>
 				<li>Contact</li>
 			</ul>
 
@@ -88,8 +88,8 @@ export default function Nav(props) {
 			>
 				<li className="py-6 text-4xl">Home</li>
 				<li className="py-6 text-4xl">About</li>
-				<li className="py-6 text-4xl">Projects</li>
 				<li className="py-6 text-4xl">Skills</li>
+				<li className="py-6 text-4xl">Projects</li>
 				<li className="py-6 text-4xl">Contact</li>
 			</ul>
 		</nav>
