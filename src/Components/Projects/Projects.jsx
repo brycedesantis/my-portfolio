@@ -8,7 +8,7 @@ export default function Projects() {
 		<div name="projects" className="w-full md:h-screen bg-inherit">
 			<div className="max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full">
 				<div className="pb-8">
-					<p className="text-4xl inline font-bold border-b-4 border-pink-600">
+					<p className="text-4xl inline font-bold border-b-4 border-[#A00822] dark:border-pink-600">
 						Projects
 					</p>
 					<p className="py-6">Here are a few projects that I have worked on</p>

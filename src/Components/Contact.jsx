@@ -10,7 +10,7 @@ export default function Contact() {
 				className="flex flex-col max-w-[600px] w-full"
 			>
 				<div className="pb-8">
-					<p className="text-4xl inline font-bold border-b-4 border-pink-600">
+					<p className="text-4xl inline font-bold border-b-4 border-[#A00822] dark:border-pink-600">
 						Contact
 					</p>
 					<p className="py-4">
@@ -36,7 +36,7 @@ export default function Contact() {
 					rows="10"
 					placeholder="Message"
 				></textarea>
-				<button className="text-white border-2 hover:bg-pink-600 hover:border-pink-600 px-4 py-3 my-8 mx-auto flex items-center">
+				<button className="border-2 border-black hover:bg-[#A00822] hover:border-[#A00822] hover:text-white dark:hover:bg-pink-600 dark:hover:border-pink-600 dark:border-white dark:text-white px-4 py-3 my-8 mx-auto flex items-center">
 					Send
 				</button>
 			</form>

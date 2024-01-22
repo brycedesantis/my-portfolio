@@ -43,7 +43,7 @@ export default function Nav(props) {
 					</li>
 					<li className="group/item hover:scale-110 flex flex-col items-center mt-6">
 						<a
-							href="www.linkedin.com/in/bryce-desantis-a969381b8"
+							href="https://www.linkedin.com/in/bryce-desantis-a969381b8/"
 							target="_blank"
 							rel="noreferrer"
 						>
@@ -130,9 +130,9 @@ export default function Nav(props) {
 						Contact
 					</Link>
 				</li>
-				<li>
+				<li className="py-4">
 					<ul className="flex justify-evenly">
-						<li className="group/item hover:scale-110 flex flex-col items-center mt-6">
+						<li className="group/item flex flex-col items-center mt-6">
 							<a
 								href="https://github.com/brycedesantis"
 								target="_blank"
@@ -141,7 +141,7 @@ export default function Nav(props) {
 								<FaGithub size={30} />
 							</a>
 						</li>
-						<li className="group/item hover:scale-110 flex flex-col items-center mt-6">
+						<li className="group/item flex flex-col items-center mt-6">
 							<a
 								href="www.linkedin.com/in/bryce-desantis-a969381b8"
 								target="_blank"
