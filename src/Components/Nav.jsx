@@ -143,7 +143,7 @@ export default function Nav(props) {
 						</li>
 						<li className="group/item flex flex-col items-center mt-6">
 							<a
-								href="www.linkedin.com/in/bryce-desantis-a969381b8"
+								href="https://www.linkedin.com/in/bryce-desantis-a969381b8/"
 								target="_blank"
 								rel="noreferrer"
 							>
