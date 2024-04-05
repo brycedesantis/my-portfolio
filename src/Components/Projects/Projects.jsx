@@ -1,8 +1,8 @@
-import Card from "../Card"
-import { TicTacToe, Calculator, EtchASketch, MemoryGame } from "./ProjectData"
+import Card from "../Card";
+import { TicTacToe, Calculator, InstaClone, MemoryGame } from "./ProjectData";
 
 export default function Projects() {
-	const projects = [TicTacToe, Calculator, EtchASketch, MemoryGame]
+	const projects = [TicTacToe, Calculator, InstaClone, MemoryGame];
 
 	return (
 		<div name="projects" className="w-full md:h-screen bg-inherit">
@@ -27,5 +27,5 @@ export default function Projects() {
 				</div>
 			</div>
 		</div>
-	)
+	);
 }
