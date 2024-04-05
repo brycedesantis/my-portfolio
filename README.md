@@ -1,4 +1,21 @@
-# React + Vite
+# Portfolio
+
+## Live version
+
+[My Portfolio](https://brycedesantis.netlify.app/)
+
+## Description
+
+A personal website to display projects that I have created during my journey of learning Front End Development. The website was built using HTML, CSS, React & Tailwind.
+
+## Features
+- Built using React and Tailwind
+- Responsive design
+- Light and Dark mode
+
+
+
+## React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
